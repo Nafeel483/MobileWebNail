@@ -93,14 +93,14 @@ class Authentication extends Component {
               <View style={Styles.emailWrapper}>
                 <TextInput
                   style={Styles.emailInput}
-                  value={email}
+                  value={password}
                   placeholder={'Password'}
                   placeholderTextColor={Colors.emailColor}
                   autoCapitalize='none'
                   secureTextEntry={true}
                   autoCorrect={false}
                   onChangeText={(value) => {
-                    this.setState({ email: value })
+                    this.setState({ password: value })
                   }}
 
                 />

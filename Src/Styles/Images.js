@@ -18,6 +18,14 @@ const images = {
   heart: require('../Assets/Bottom/heart.png'),
   home: require('../Assets/Bottom/home.png'),
   category: require('../Assets/Bottom/category.png'),
+  serviceCenter: require('../Assets/Bottom/serviceCenter.png'),
+  magzine: require('../Assets/Bottom/magzine.png'),
+  socialFacebook: require('../Assets/Bottom/socialFacebook.png'),
+  socialInstagram: require('../Assets/Bottom/socialInstagram.png'),
+  socialMessanger: require('../Assets/Bottom/socialMessanger.png'),
+  socialWhatsapp: require('../Assets/Bottom/socialWhatsapp.png'),
+  contactUs: require('../Assets/Bottom/contactUs.png'),
+
   // Home
   homeMain: require('../Assets/home/homeMain.jpg'),
   gift: require('../Assets/home/gift.png'),
@@ -40,6 +48,21 @@ const images = {
   close: require('../Assets/login/close.png'),
   facebook: require('../Assets/login/facebook.png'),
   google: require('../Assets/login/google.png'),
+
+  // privacy
+  aboutUs: require('../Assets/privacy/aboutUs.png'),
+  certification: require('../Assets/privacy/certification.png'),
+  faq: require('../Assets/privacy/faq.png'),
+  orderTracking: require('../Assets/privacy/orderTracking.png'),
+  paymentCard: require('../Assets/privacy/paymentCard.png'),
+  privacy: require('../Assets/privacy/privacy.png'),
+  ternPoint: require('../Assets/privacy/ternPoint.png'),
+  ternUse: require('../Assets/privacy/ternUse.png'),
+  showCertification: require('../Assets/privacy/showCertification.png'),
+
+  dropUp: require('../Assets/privacy/dropUp.png'),
+  dropDown: require('../Assets/privacy/dropDown.png'),
+
 
 };
 export default images;

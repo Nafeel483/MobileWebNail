@@ -22,11 +22,76 @@ class DrawerContent extends Component {
     super(props);
     this.state = {
       switchValue: true,
-      selectedValue: 1,
+      selectedValue: null,
       modelLogout: false,
       settingsData: [],
+      titles: [
+        {
+          name: 'My Account',
+          des: 'Everything in one place',
+          pic: Images.profile,
+        },
+        {
+          name: 'Home',
+          des: 'Everything in one place',
+          pic: Images.home,
+        },
+        {
+          name: 'All Categories',
+          des: 'Everything in one place',
+          pic: Images.category,
+        },
+        {
+          name: 'Search',
+          des: 'Everything in one place',
+          pic: Images.search,
+        },
+        {
+          name: 'Favorites',
+          des: 'Everything in one place',
+          pic: Images.heart,
+        },
+        {
+          name: 'The Magazin',
+          des: 'Everything in one place',
+          pic: Images.magzine,
+        },
+        {
+          name: 'Service Center',
+          des: 'Everything in one place',
+          pic: Images.serviceCenter,
+        },
+        {
+          name: 'Contact Us',
+          des: 'you can contact us by WhatsApp, email, facebook, call or contact form..',
+          pic: Images.contactUs,
+        },
+      ],
+      socialData: [
+        {
+          pic: Images.socialWhatsapp
+        },
+        {
+          pic: Images.socialMessanger
+        },
+        {
+          pic: Images.socialFacebook
+        },
+        {
+          pic: Images.socialInstagram
+        },
+      ]
     };
-
+    this.navigates = [
+      "",
+      "Home",
+      "",
+      "",
+      "",
+      "Magazine",
+      "ServiceCenter",
+      ""
+    ]
   }
 
   filterByReference = (arr1, arr2) => {
@@ -43,7 +108,7 @@ class DrawerContent extends Component {
     // let navigates = this.props?.setting?.navigationDrawrList
 
     this.setState({ selectedValue: index })
-    this.props.navigation.navigate(navigates[index].name);
+    this.props.navigation.navigate(this.navigates[index]);
     this.props.navigation.closeDrawer();
 
 
@@ -52,87 +117,123 @@ class DrawerContent extends Component {
   _renderItem = (value, index) => {
     const { selectedValue } = this.state
     return (
-      <View key={index} style={{ height: hp(12), }}>
-        {/* {index !== 0 && this._renderSeparator()} */}
-        <TouchableOpacity
-          onPress={() => {
-            this._onPress(value, index);
+      <>
+        <View style={{ width: '100%', height: hp(0.2), backgroundColor: Colors.iconColor }} />
+        <View style={{
+          backgroundColor: selectedValue == index ? Colors.darkPink : Colors.White
+        }}>
+
+
+          <View key={index} style={{
+            marginTop: hp(2), marginBottom: hp(2),
           }}>
-          <View style={{ flexDirection: 'row' }}>
-            <View style={{ height: hp(5), width: 10, backgroundColor: selectedValue == index ? "#FFA958" : Colors.drawerColor }} />
-            <View style={{ marginLeft: hp(2), width: 100 }}>
-              <Image source={value.image} style={{
-                width: hp(3),
-                height: hp(3),
-                tintColor: selectedValue == index ? "#FFA958" : Colors.White,
-                alignSelf: 'center'
-              }} />
-              <Text style={[{
-                marginTop: 5, fontSize: hp(1.4), textAlign: 'center',
-                color: selectedValue == index ? "#FFA958" : Colors.White, fontWeight: '600'
-              }]}>{value.name}</Text>
-            </View>
+            {/* {index !== 0 && this._renderSeparator()} */}
+            <TouchableOpacity
+              onPress={() => {
+                this._onPress(value, index);
+              }}>
+              <View style={{
+                flexDirection: 'row', width: '95%', alignSelf: 'center', justifyContent: 'space-between',
+              }}>
+                <View style={{ marginLeft: hp(2), flexDirection: 'row' }}>
+                  {
+                    index == 0 ?
+                      <Image source={value.pic} style={{
+                        width: hp(3.5),
+                        height: hp(3.5),
+                        borderRadius: hp(3.5),
+                        alignSelf: 'center'
+                      }} />
+                      :
+                      <Image source={value.pic} style={{
+                        width: index == 1 ? hp(2.8) : index == 4 ? hp(3.1) : index == 7 ? hp(3.1) : hp(3),
+                        height: index == 4 ? hp(2.5) : index == 6 ? hp(2.4) : hp(3),
+                        tintColor: selectedValue == index ? Colors.White : Colors.black,
+                        alignSelf: 'center'
+                      }} />
+                  }
+
+                  <View style={{ marginLeft: hp(2) }}>
+                    <Text style={[{
+                      fontSize: hp(2),
+                      color: selectedValue == index ? Colors.White : Colors.black, fontWeight: '700'
+                    }]}>{value.name}</Text>
+                    <Text style={[{
+                      fontSize: hp(1.2),
+                      width: hp(20),
+                      color: selectedValue == index ? Colors.White : Colors.black, fontWeight: '400'
+                    }]}>{value.des}</Text>
+                  </View>
+                </View>
+                {
+                  index == 7 ?
+                    <Image source={Images.chevron} style={styles.chevronTrend1} />
+                    :
+                    <Image source={Images.chevron} style={styles.chevronTrend} />
+                }
+              </View>
+            </TouchableOpacity>
           </View>
-        </TouchableOpacity>
-      </View>
+        </View>
+      </>
     );
   };
 
   render() {
-    // let titles = this.props?.setting?.titleDrawrList
-
-
+    const { titles, socialData } = this.state
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: Colors.White }}>
 
         <View
           style={{
-            marginTop: Platform.OS == 'ios' ? hp(5) : hp(6),
+            marginTop: Platform.OS == 'ios' ? hp(3) : hp(4),
             backgroundColor: Colors.White,
             width: "100%",
-            justifyContent: 'center',
             paddingHorizontal: Metrics.padding,
-            alignItems: "center"
-          }}
-        >
-          {/* <View style={{ flexDirection: 'row', width: "90%", alignSelf: 'center', justifyContent: 'space-between' }}> */}
-
-
-          {/* <TouchableOpacity onPress={() => { this.props.navigation.closeDrawer() }}>
-            <Image source={Images.cross} style={{
+          }}>
+          <TouchableOpacity onPress={() => { this.props.navigation.closeDrawer() }}>
+            <Image source={Images.close} style={{
               width: hp(3),
               height: hp(3),
-              marginTop: 5,
-              alignSelf: 'center'
+              marginLeft: hp(1),
+              alignSelf: 'flex-start',
+              tintColor: Colors.darkPink
             }} />
-          </TouchableOpacity> */}
-
-
-          {/* </View> */}
-          {/* 2nd */}
+          </TouchableOpacity>
 
         </View>
 
-        {/* {
+        {
           <ScrollView>
             <View style={styles.container1}>
-              {titles.map(this._renderItem)}
+              <View>
+                {titles.map(this._renderItem)}
+              </View>
+              <View style={{ width: '100%', height: hp(0.2), backgroundColor: Colors.iconColor }} />
+              <View style={styles.bottomWrapper}>
+                {
+                  socialData?.map((val, index) => {
+                    return (
+                      <>
+                        {
+                          index == 2 ?
+                            <TouchableOpacity>
+                              <Image source={val?.pic} style={styles.socialPic1} />
+                            </TouchableOpacity> :
+                            <TouchableOpacity>
+                              <Image source={val?.pic} style={styles.socialPic} />
+                            </TouchableOpacity>
+                        }
+                      </>
+                    )
+                  })
+                }
+              </View>
             </View>
-          </ScrollView>
-        } */}
-        {/* <View style={{ flex: 0.1, flexDirection: "row", width: '85%', alignSelf: 'center' }}>
 
-          <TouchableOpacity
-            onPress={() => { this.props.navigation.closeDrawer() }}
-          >
-            <Image source={Images.back} style={{
-              width: 30,
-              height: 30,
-              tintColor: Colors.appHeaderColor
-            }} />
-          </TouchableOpacity>
-          <Text style={[{ marginLeft: 15, fontSize: 17, color: Colors.appHeaderColor, marginTop: 2, fontWeight: '500' }]}>{'Back'}</Text>
-        </View> */}
+
+          </ScrollView>
+        }
 
       </SafeAreaView>
     );
@@ -145,14 +246,43 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.drawerColor
   },
   container1: {
-    marginTop: '25%',
-    marginBottom: 20,
+    marginTop: hp(3),
+    marginBottom: hp(3),
     backgroundColor: Colors.drawerColor
   },
   text: {
     fontSize: 20,
     fontWeight: "700",
     color: "black"
+  },
+  chevronTrend: {
+    width: hp(1),
+    height: hp(1.5),
+    marginTop: hp(1.5),
+    tintColor: Colors.darkPink,
+    marginRight: hp(1.3)
+  },
+  chevronTrend1: {
+    width: hp(1),
+    height: hp(1.5),
+    marginTop: hp(2.3),
+    tintColor: Colors.darkPink,
+    marginRight: hp(1.3)
+  },
+  bottomWrapper: {
+    marginTop: hp(3),
+    width: '90%',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
+  },
+  socialPic: {
+    width: hp(3),
+    height: hp(3)
+  },
+  socialPic1: {
+    width: hp(2),
+    height: hp(3.3)
   }
 });
 
