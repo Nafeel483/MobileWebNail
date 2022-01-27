@@ -83,14 +83,14 @@ class DrawerContent extends Component {
       ]
     };
     this.navigates = [
-      "",
+      "MyAccount",
       "Home",
-      "",
+      "AllCategories",
       "",
       "",
       "Magazine",
       "ServiceCenter",
-      ""
+      "ContactUs"
     ]
   }
 

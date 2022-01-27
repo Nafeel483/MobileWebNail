@@ -8,6 +8,13 @@ import ServiceCenter from '../Screens/ServiceCenter';
 import Privacy from '../Screens/Privacy';
 import Certification from '../Screens/Certification';
 import FAQ from '../Screens/FAQ';
+import ContactUs from '../Screens/ContactUs';
+import OrderTracking from '../Screens/OrderTracking';
+import AboutUs from '../Screens/AboutUs';
+import MyAccount from '../Screens/MyAccount';
+import AllCategories from '../Screens/AllCategories';
+import SingleCategory from '../Screens/AllCategories/SingleCategory';
+import AddToCart from '../Screens/AddToCart';
 
 const AuthNavigation = createStackNavigator(
   {
@@ -20,6 +27,14 @@ const AuthNavigation = createStackNavigator(
     Privacy: { screen: Privacy },
     Certification: { screen: Certification },
     FAQ: { screen: FAQ },
+    ContactUs: { screen: ContactUs },
+    OrderTracking: { screen: OrderTracking },
+    AboutUs: { screen: AboutUs },
+    MyAccount: { screen: MyAccount },
+    AllCategories: { screen: AllCategories },
+    SingleCategory: { screen: SingleCategory },
+    AddToCart: { screen: AddToCart },
+
   },
   {
     navigationOptions: {

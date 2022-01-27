@@ -25,6 +25,10 @@ const images = {
   socialMessanger: require('../Assets/Bottom/socialMessanger.png'),
   socialWhatsapp: require('../Assets/Bottom/socialWhatsapp.png'),
   contactUs: require('../Assets/Bottom/contactUs.png'),
+  location: require('../Assets/Bottom/location.png'),
+  email: require('../Assets/Bottom/email.png'),
+  time: require('../Assets/Bottom/time.png'),
+
 
   // Home
   homeMain: require('../Assets/home/homeMain.jpg'),
@@ -48,6 +52,15 @@ const images = {
   close: require('../Assets/login/close.png'),
   facebook: require('../Assets/login/facebook.png'),
   google: require('../Assets/login/google.png'),
+  earthPic: require('../Assets/home/earthPic.png'),
+  accountCards: require('../Assets/login/accountCards.png'),
+  orders: require('../Assets/login/orders.png'),
+  logout: require('../Assets/login/logout.png'),
+  categoryImage: require('../Assets/login/categoryImage.png'),
+  Equipment: require('../Assets/login/Equipment.png'),
+  Manicure: require('../Assets/login/Manicure.png'),
+  pedicure: require('../Assets/login/pedicure.png'),
+  protect: require('../Assets/login/protect.png'),
 
   // privacy
   aboutUs: require('../Assets/privacy/aboutUs.png'),

@@ -28,3 +28,16 @@ export const FAQ_2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
 export const FAQ_3 = "commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 
+// About Us
+export const ABOUT_1 = "We offer a wide range of manicure products, nail building products, pedicure products and more."
+export const ABOUT_2 = "The products we market are of the highest quality and quality we do not compromise."
+export const ABOUT_3 = "We have set ourselves the goal of providing the best service and will always be happy to hear things for improvement and preservation."
+export const ABOUT_4 = "On our site, you can comfortably explore the products displayed with an illustration and product information. We offer among other things: nail liquids, building gels, files and buffers, and professional tools for manicure and pedicure."
+export const ABOUT_5 = "Webnail now ships to over 220 countries and regions worldwide. Webnail ships from one of its many globally positioned warehouses. Webnail continues to thrive due in part to the company’s values in controlling the excellence of in-house production."
+export const ABOUT_6 = "In our company we believe that reliable and dedicated customer service is an integral part of product quality. With our convenient customer service you can quickly and easily purchase quality products and ask questions about the products and their use, just like talking to a seller in the store!"
+export const ABOUT_7 = "You can contact us in English, Hebrew and Russian via the Whatsapp app in the number +380 99 0188703 or by chat on the site"
+export const ABOUT_8 = "Once you’ve selected the products you want to purchase you can pay by credit card or PayPal account."
+export const ABOUT_9 = "The deliveries are made by Post Office of Ukraine and therefore the arrival times are not determined by us."
+export const ABOUT_10 = "In order to provide our customers with the product as soon as possible, we deliver the shipment right on the order day."
+
+

@@ -27,7 +27,7 @@ class Bottom extends Component {
     }
     else if (value === 3) {
       this.setState({ navigatinUpdate: value })
-      // this.props.navigation.navigate('Challanges')
+      this.props.navigation.navigate('AllCategories')
     }
     else if (value === 4) {
       this.setState({ navigatinUpdate: value })

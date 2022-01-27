@@ -9,7 +9,8 @@ const colors = {
   darkPink: '#DE005B',
   darkGrey: '#707070',
   lightGrey: '#F5F5F5',
-  emailColor: '#2E2E2E'
+  emailColor: '#2E2E2E',
+  lightWhite: "#FAFAFA"
 };
 
 export default colors;

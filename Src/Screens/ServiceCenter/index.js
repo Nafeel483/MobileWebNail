@@ -86,6 +86,16 @@ class ServiceCenter extends Component {
     else if (index == 2) {
       this.props.navigation.navigate('FAQ')
     }
+    else if (index == 0) {
+      this.props.navigation.navigate('ContactUs')
+    }
+    else if (index == 3) {
+      this.props.navigation.navigate('OrderTracking')
+    }
+    else if (index == 1) {
+      this.props.navigation.navigate('AboutUs')
+
+    }
   }
 
   productTicketList = (item, index) => {
