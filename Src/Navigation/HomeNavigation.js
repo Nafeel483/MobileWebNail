@@ -15,6 +15,7 @@ import MyAccount from '../Screens/MyAccount';
 import AllCategories from '../Screens/AllCategories';
 import SingleCategory from '../Screens/AllCategories/SingleCategory';
 import AddToCart from '../Screens/AddToCart';
+import Cart from '../Screens/Cart';
 
 const AuthNavigation = createStackNavigator(
   {
@@ -34,6 +35,7 @@ const AuthNavigation = createStackNavigator(
     AllCategories: { screen: AllCategories },
     SingleCategory: { screen: SingleCategory },
     AddToCart: { screen: AddToCart },
+    Cart: { screen: Cart },
 
   },
   {

@@ -126,16 +126,16 @@ class AddToCart extends Component {
                   <Text style={Styles.magazineText}>{"Similar Products"}</Text>
 
                   <View style={Styles.allProductList}>
-                  <FlatList
-                    key={ticketColums}
-                    scrollEnabled={false}
-                    showsVerticalScrollIndicator={false}
-                    data={allProductList}
-                    keyExtractor={(item, index) => index.toString()}
-                    renderItem={({ item, index }) => this.productTicketList(item, index)}
-                    numColumns={ticketColums}
-                  />
-                </View>
+                    <FlatList
+                      key={ticketColums}
+                      scrollEnabled={false}
+                      showsVerticalScrollIndicator={false}
+                      data={allProductList}
+                      keyExtractor={(item, index) => index.toString()}
+                      renderItem={({ item, index }) => this.productTicketList(item, index)}
+                      numColumns={ticketColums}
+                    />
+                  </View>
                 </View>
 
 
@@ -148,7 +148,8 @@ class AddToCart extends Component {
                   <Image source={Images.heart} style={Styles.heartStyle1} />
                 </TouchableOpacity>
 
-                <TouchableOpacity style={Styles.innerCartButton}>
+                <TouchableOpacity onPress={() => { this.props.navigation.navigate("Cart") }}
+                  style={Styles.innerCartButton}>
                   <Text style={Styles.cartText11}>{"Add To Cart"}</Text>
                   <Text style={Styles.cartDes}>{"Get 10 Points"}</Text>
                 </TouchableOpacity>

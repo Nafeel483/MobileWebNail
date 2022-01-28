@@ -61,6 +61,8 @@ const images = {
   Manicure: require('../Assets/login/Manicure.png'),
   pedicure: require('../Assets/login/pedicure.png'),
   protect: require('../Assets/login/protect.png'),
+  cross: require('../Assets/login/cross.png'),
+  tick: require('../Assets/login/tick.png'),
 
   // privacy
   aboutUs: require('../Assets/privacy/aboutUs.png'),
